@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>Hong Kong : Demo</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.3.1/mapbox-gl.js'></script>
+
+
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.3.1/mapbox-gl.css' rel='stylesheet' />
+    <link href='style/my.css' rel='stylesheet' />
+    <!-- <link href='style/bootstrap/css/bootstrap-responsive.min.css' rel='stylesheet' /> -->
+</head>
+<body>
+<div id='map'></div>
+<br />
+<div id="vote">
+  <h1><a href="#" onclick='fly("Hong Kong", this);' id='flyHongKong' class="home">戰略<br/>・選舉</a></h1>
+
+  <button onclick='fly("MongKok", this);' id='flyMongKok'>旺角 Mong Kok</button>
+
+  <form>
+    <div id="radio_MK">
+      <label>
+         <input type="radio" value="radioMK_leave" name="radioMK">
+         <i>撤離 Withdraw</i>
+      </label>
+      <label>
+         <input type="radio" value="radioMK_stay" name="radioMK">
+         <i>堅守 Hold On</i>
+      </label>
+      <label>
+         <input type="radio" value="radioMK_focus" name="radioMK">
+         <i>集中佔政總 Move to Gov HQ</i>
+      </label>
+    </div>
+  </form>
+
+  <button onclick='fly("CausewayBay", this);' id='flyCausewayBay'>銅鑼灣 Causeway Bay</button>
+  <form>
+    <div id="radio_CWB">
+      <label>
+         <input type="radio" value="radioCWB_leave" name="radioCWB">
+         <i>撤離 Withdraw</i>
+      </label>
+      <label>
+         <input type="radio" value="radioCWB_stay" name="radioCWB">
+         <i>堅守 Hold On</i>
+      </label>
+      <label>
+         <input type="radio" value="radioCWB_focus" name="radioCWB">
+         <i>集中佔政總 Move to Gov HQ</i>
+      </label>
+    </div>
+  </form>
+
+  <button onclick='fly("Admiralty", this);' id='flyAdmiralty'>金鐘 Admiralty</button>
+  <form>
+    <div id="radio_ADM">
+      <label>
+         <input type="radio" value="radioADM_leave" name="radioADM">
+         <i>撤離 Withdraw</i>
+      </label>
+      <label>
+         <input type="radio" value="radioADM_stay" name="radioADM">
+         <i>堅守 Hold On</i>
+      </label>
+      <label>
+         <input type="radio" value="radioADM_focus" name="radioADM">
+         <i>集中佔政總 Move to Gov HQ</i>
+      </label>
+    </div>
+  </form>
+</div>
+<div id="confirm">
+  <form name="input" action="demo_form_action.asp" method="get">
+    HK Phone no.: <input type="text" name="user">
+    HKID: <input type="text" name="user"><br/>
+    <button type="submit" id="vote_btn">Vote</button>
+  </form>
+</div>
+
+<!-- <script src="http://code.jquery.com/jquery.js"></script>
+<script src="style/bootstrap/js/bootstrap.min.js"></script> -->
+<script src='logic/my.js'></script>
+</body>
+</html>

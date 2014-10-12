@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>Hong Kong | Demo</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=yes' />
+    <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.2/mapbox.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.2/mapbox.css' rel='stylesheet' />
+    <link href='style/my.css' rel='stylesheet' />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src='https://code.jquery.com/jquery-2.1.1.min.js'></script>
+    
+</head>
+<body>
+<div id="info">
+  <h1><i class="fa fa-info-circle"></i> 民主</h1>
+  <p>Objectives</p>
+  <p>Methods</p>
+  <p>anything else about this voting system.</p>
+  <h1><a href="#" class="close_btn"><i class="fa fa-times"></i></a></h1>
+</div>
+
+<div id="umbrella">
+  <h1><i class="fa fa-umbrella"></i> 香港</h1>
+  <p>Write</p>
+  <p>Something</p>
+  <p>Meaningful here.</p>
+  <h1><a href="#" class="close_btn"><i class="fa fa-times"></i></a></h1>
+</div>
+
+<div id="warning" class="shadow">
+  <h1><i class="fa fa-exclamation-circle"></i></h1>
+  <p id="errorMsg">Error Message.</p>
+</div>
+
+<div id='map'></div>
+<div id="vote">
+  <h1><a href="#" id="umbrella_btn"><i class="fa fa-umbrella"></i></a></h1>
+  <h1><a href="#" id="info_btn"><i class="fa fa-info-circle"></i></a></h1>
+
+  <div id="choices" class="noselect">
+    <button id='flyMongKok'>旺角 Mong Kok</button>
+    <form>
+      <div id="radio_MK">
+        <label>
+           <input type="radio" value="radioMK_leave" name="radioMK">
+           <i>撤離 Withdraw</i>
+        </label>
+        <label>
+           <input type="radio" value="radioMK_stay" name="radioMK">
+           <i>堅守 Hold On</i>
+        </label>
+        <label>
+           <input type="radio" value="radioMK_focus" name="radioMK">
+           <i>集中佔政總 Gov HQ</i>
+        </label>
+      </div>
+    </form>
+
+    <button id='flyCausewayBay'>銅鑼灣 Causeway Bay</button>
+    <form>
+      <div id="radio_CWB">
+        <label>
+           <input type="radio" value="radioCWB_leave" name="radioCWB">
+           <i>撤離 Withdraw</i>
+        </label>
+        <label>
+           <input type="radio" value="radioCWB_stay" name="radioCWB">
+           <i>堅守 Hold On</i>
+        </label>
+        <label>
+           <input type="radio" value="radioCWB_focus" name="radioCWB">
+           <i>集中佔政總 Gov HQ</i>
+        </label>
+      </div>
+    </form>
+
+    <button id='flyAdmiralty'>金鐘 Admiralty</button>
+    <form>
+      <div id="radio_ADM">
+        <label>
+           <input type="radio" value="radioADM_leave" name="radioADM">
+           <i>撤離 Withdraw</i>
+        </label>
+        <label>
+           <input type="radio" value="radioADM_stay" name="radioADM">
+           <i>堅守 Hold On</i>
+        </label>
+        <label class="disabled">
+           <input type="radio" value="radioADM_focus" name="radioADM" disabled>
+           <i>集中佔政總 Gov HQ</i>
+        </label>
+      </div>
+    </form>
+  </div>
+</div>
+<div id="confirm">
+  <form name="input" action="/vote" method="get">
+    <div id="personalInfo">
+      <div class="infoEntry">HK Mobile #: <input type="text" name="phone" value="23456789" class="untouched"></div>
+      <div class="infoEntry">HKID #: <input type="text" name="hkid" value="A123456(Z)" class="untouched"></div>
+    </div>
+    <button type="submit" id="vote_btn">Vote</button>
+  </form>
+</div>
+
+<!-- <script src="http://code.jquery.com/jquery.js"></script>
+<script src="style/bootstrap/js/bootstrap.min.js"></script> -->
+<script src='logic/my.js'></script>
+</body>
+</html>
