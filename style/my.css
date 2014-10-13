@@ -230,27 +230,39 @@ input[type="radio"]:checked ~ i {
   margin: 10px 0;
 }
 
-#warning {
+#warning, #verification {
   display: none;
   position: fixed;
-  width: 300px;
-  height: 300px;
-  left: 50%;
-  top: 50%;
-  margin-top: -150px;
-  margin-left: -150px;
   text-align: center;
   color: white;
-  background: #ee004c;
   z-index: 999;
   padding: 15px;
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
   box-sizing: border-box;         /* Opera/IE 8+ */
 }
-#warning p {
+#warning {
+  background: #ee004c;
+  width: 300px;
+  height: 300px;
+  left: 50%;
+  top: 50%;
+  margin-top: -150px;
+  margin-left: -150px;
+}
+#verification {
+  background: rgba(0,0,0,0.9);
+  width: 100%;
+  height: 100%;
+  padding-top: 120px;
+}
+#warning p, #verification p {
   color: white;
   line-height: 2em;
+}
+
+#share {
+  margin-top: 60px;
 }
 
 .noselect {
@@ -324,5 +336,8 @@ input[type="radio"]:checked ~ i {
   }
   .infoEntry input {
     font-size: 14px;
+  }
+  .rrssb-buttons li a .text {
+    display: none;
   }
 }

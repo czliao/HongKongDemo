@@ -125,6 +125,7 @@ $(function() {
   }
   function hideWarning() {
     $('#warning').fadeOut();
+    $('.active').removeClass('active');
   }
 
   function vote(e) {
@@ -136,7 +137,7 @@ $(function() {
         infoPhone = $('input[name=phone]').val(),
         infoHKID = $('input[name=hkid]').val(),
         result;
-    if (voteMK && voteCWB && voteADM && infoPhone && infoHKID) {
+    if (voteMK && voteCWB && voteADM && infoPhone && infoPhone!="23456789" && infoHKID && infoHKID!="A123456(Z)" ) {
 
       ///// still need type checking here /////
       // phone no. must be 8 digit numbers
@@ -150,6 +151,8 @@ $(function() {
         "infoHKID" : infoHKID
       }
       console.log(result);
+      $("#verification").fadeIn();
+      $(window).trigger('resize');
 
       ///// hook up with polling backend /////
       // phone no. must be 8 digit numbers
