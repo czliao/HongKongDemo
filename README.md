@@ -12,6 +12,8 @@ by: JL
 
 Need lots of help with rapid dev, if deem worthy of distributing.
 
+<a href="http://liao.cz/lab/hongkongdemo">Demo</a>.
+
 
 Credits:
 http://mapbox.com
