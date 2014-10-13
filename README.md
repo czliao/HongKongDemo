@@ -14,8 +14,10 @@ Need lots of help with rapid dev, if deem worthy of distributing.
 
 <h1>See the <a href="http://liao.cz/lab/hongkongdemo">Demo</a></h1>
 
+------------
 
 Credits:
+
 http://mapbox.com<br/>
 http://fortawesome.github.io/<br/>
 http://jquery-plugins.net/ridiculously-responsive-social-sharing-buttons
