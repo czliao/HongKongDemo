@@ -16,6 +16,6 @@ Need lots of help with rapid dev, if deem worthy of distributing.
 
 
 Credits:
-http://mapbox.com
-http://fortawesome.github.io/
+http://mapbox.com<br/>
+http://fortawesome.github.io/<br/>
 http://jquery-plugins.net/ridiculously-responsive-social-sharing-buttons
