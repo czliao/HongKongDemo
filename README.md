@@ -12,7 +12,7 @@ by: JL
 
 Need lots of help with rapid dev, if deem worthy of distributing.
 
-<a href="http://liao.cz/lab/hongkongdemo">Demo</a>.
+<h1>See the <a href="http://liao.cz/lab/hongkongdemo">Demo</a></h1>
 
 
 Credits:
