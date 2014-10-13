@@ -64,8 +64,10 @@ $(function() {
   $('#flyMongKok').click({destination: "MongKok"}, fly);
   $('#flyCausewayBay').click({destination: "CausewayBay"}, fly);
   $('#flyAdmiralty').click({destination: "Admiralty"}, fly);
+  $('form label i').click(checkSelection);
   $('#vote_btn').click({destination: "Hong Kong"}, fly);
   $('#vote_btn').click(vote);
+
 
   $('.untouched').focus(function() {
     $(this).val('');
@@ -127,7 +129,20 @@ $(function() {
     $('#warning').fadeOut();
     $('.active').removeClass('active');
   }
-
+  function checkSelection() {
+    setTimeout(function() {
+      var voteMK = $('input[name=radioMK]:checked').val(),
+          voteCWB = $('input[name=radioCWB]:checked').val(),
+          voteADM = $('input[name=radioADM]:checked').val();
+      console.log(voteMK);
+      console.log(voteCWB);
+      console.log(voteADM);
+      if (voteMK && voteCWB && voteADM) {
+        console.log('remove hide.');
+        $("#confirm").removeClass('hide');
+      }
+    }, 500);
+  }
   function vote(e) {
     e.preventDefault();
     var errorMsg = 'Error Message',
@@ -152,7 +167,7 @@ $(function() {
       }
       console.log(result);
       $("#verification").fadeIn();
-      $(window).trigger('resize');
+        $(window).trigger('resize');
 
       ///// hook up with polling backend /////
       // phone no. must be 8 digit numbers
