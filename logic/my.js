@@ -1,60 +1,14 @@
 $(function() {
   var map;
 
-  L.mapbox.accessToken = 'pk.eyJ1IjoiY3psaWFvIiwiYSI6IlE0b0ZqaW8ifQ.ByvSnyFH0IzbRjGOe0re0A';
-  var map = L.mapbox.map('map', 'czliao.jo2446d8', {
+  L.mapbox.accessToken = config.apikey;
+  var map = L.mapbox.map('map', config.mapboxUser, {
     zoomControl: false,
     center: [22.287, 114.173],
     zoom: 14,
     minZoom: 12
   });
       
-   // mapboxgl.accessToken = 'pk.eyJ1IjoiY3psaWFvIiwiYSI6IlE0b0ZqaW8ifQ.ByvSnyFH0IzbRjGOe0re0A';
-   //  mapboxgl.util.getJSON('https://www.mapbox.com/mapbox-gl-styles/styles/outdoors-v5.json', function (err, style) {
-   //    if (err) throw err;
-
-   //    // add feature layer
-   //    var featureSource = new mapboxgl.GeoJSONSource({
-   //        data: 'https://a.tiles.mapbox.com/v4/czliao.jo2446d8/features.json?access_token=pk.eyJ1IjoiY3psaWFvIiwiYSI6IlE0b0ZqaW8ifQ.ByvSnyFH0IzbRjGOe0re0A'
-   //    });
-
-   //    style.layers.push({
-   //      "id": "zones",
-   //      "source": "zones",
-   //      // "render": {
-   //      //   "$type": "LineString",
-   //      //   "line-join": "round",
-   //      //   "line-cap": "round"
-   //      // },
-   //      "style": {
-   //        // "line-color": "#888",
-   //        "line-width": 2,
-   //        // "fill-color": "#000"
-   //        "color": "#ff7800",
-   //        "weight": 5,
-   //        "opacity": 0.65
-   //      },
-   //      "type": "line"
-   //    });
-
-   //    // Set the global transition property in the stylesheet
-   //    style.transition = {
-   //      duration: 1000, // 1 second
-   //      delay: 0
-   //    };
-
-   //    map = new mapboxgl.Map({
-   //      container: 'map',
-   //      style: style,
-   //      center: [22.287, 114.173],
-   //      zoom: 12,
-   //      minZoom: 10,
-   //    });
-
-   //    // map.addControl(new mapboxgl.Navigation());
-   //    map.addSource('zones', featureSource);
-   //  });
-
 // listeners //
   $('#info_btn').click(showInfo);
   $('#info').click(hideInfo);

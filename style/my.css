@@ -56,16 +56,21 @@ h1 { font-size:1.5em; }
   text-align: center;
   padding: 15px 0;
 }
-#info_btn {
-  position: fixed;
-  right: 30px;
-  top: 30px;
-}
 #umbrella_btn {
   position: fixed;
-  left: 30px;
-  top: 30px;
+  padding: 30px;
+  top: 0px;
+  left: 0px;
+  z-index: 9;
 }
+#info_btn {
+  position: fixed;
+  padding: 30px;
+  top: 0px;
+  right: 0px;
+  z-index: 9;
+}
+
 .close_btn {
   position: fixed;
   right: 30px;
@@ -290,15 +295,8 @@ input[type="radio"]:checked ~ i {
   #choices {
     margin-top: -18px;
   }
-  #umbrella_btn {
-    top: 15px;
-    left: 15px;
-    z-index: 9;
-  }
-  #info_btn {
-    top: 15px;
-    right: 15px;
-    z-index: 9;
+  #info_btn, #umbrella_btn {
+    padding: 15px;
   }
   .close_btn {
     top: 15px;
